@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#wrapper{
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.container{
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto ;  /*Centers the block horizontally*/
+    padding: 20px;
+}
+
+/* container ke andar jo h1 wali heading hai... */
+/* You could also right h1{} directly. */
+.container h1{
+     margin: 20px auto;   /* Height x Width */
+     margin-bottom: 20px;
+     text-align: center;
+     font-size: 3rem ;
+}
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card{
+    width: 32%;
+    position: relative;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Ab card ke andar jo image hai, uski baat karte hai... */
+.card img{
+    width: 100%; /*Jitni parent element(i.e. card) ki width thi, utni width kardo.*/
+    height: 100%; /*Jitni parent element(i.e. card) ki height thi, utni height kardo.*/
+    filter: grayscale(100%);
+    box-shadow: 0 0 20px #333;
+    object-fit: cover;
+    
+    transition: 1.15s ease; /* Smooth transition for filter */
+    
+}
+
+.card:hover{
+    transform: scale(1.03);  /*Scale it 1.03 times*/
+    transition: 0.3s;
+    filter: drop-shadow(0 0 10px #333);
+}
+
+.card:hover img{
+      filter: grayscale(0%);
+      
+}
+
+.card figcaption{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 25px;
+    width: 100%;
+    height: 20%;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    opacity: 0;     /*means transperancy = 100%*/
+    border-radius: 0 0 10px 10px;
+    background: linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(255,255,255,0) 100%);
+    transition: 0.3s;
+
+}
+
+.card:hover figcaption{
+    opacity: 1;
+    transform: scale(1.03);
+    /* transition: 0.5s; */
+}
+
+
