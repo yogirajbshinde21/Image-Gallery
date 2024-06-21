@@ -6,7 +6,7 @@ This project is a responsive image gallery created using HTML and CSS, featuring
 
 ## Preview
 
-![Uploading image-gallery-front.png…]()
+![image-gallery-front](https://github.com/yogirajbshinde21/Image-Gallery/assets/84953719/ce5323f4-328e-4eb8-a5db-d6545ff85163)
 
 ---
 
